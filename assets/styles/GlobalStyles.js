@@ -17,14 +17,33 @@ const GlobalStyles = StyleSheet.create({
     borderRadius: 10,
     width: 10,
     height: 10,
-    position:'absolute',
-    top:12,
-    right:10
+    position: "absolute",
+    top: 12,
+    right: 10,
   },
   messageNumber: {
     color: "#fff",
     fontSize: 6,
     fontFamily: "Inter_600SemiBold",
+  },
+  userStoriesContainer: {
+    marginTop: 20,
+    marginHorizontal: 28,
+  },
+  storyContainer: {
+    marginRight: 20,
+  },
+  firstName: {
+    fontFamily: "Inter_500Medium",
+    fontSize: 14,
+    color: "#022150",
+    marginTop: 8,
+    textAlign: "center",
+  },
+  userImageContainer: {
+    borderColor: "#F35BAC",
+    borderWidth: 1,
+    padding: 3,
   },
 });
 export default GlobalStyles;

@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import {
+  FlatList,
   SafeAreaView,
   StyleSheet,
   Text,
@@ -23,6 +24,7 @@ import {
 import Title from "./components/Title/Title";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import GlobalStyles from "./assets/styles/GlobalStyles";
+import UserStories from "./components/UseStories/UserStories";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -51,6 +53,53 @@ export default function App() {
   if (!fontsLoaded) {
     return null;
   }
+  const userStories = [
+    {
+      firstName: "Joseph",
+      id: 1,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Angel",
+      id: 2,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "White",
+      id: 3,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Olivier",
+      id: 4,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Nata",
+      id: 5,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Nicolas",
+      id: 6,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Nino",
+      id: 7,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Nana",
+      id: 8,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+    {
+      firstName: "Adam",
+      id: 9,
+      profileImage: require("./assets/images/default_profile.png"),
+    },
+  ];
 
   return (
     <SafeAreaView>
@@ -62,6 +111,20 @@ export default function App() {
             <Text style={GlobalStyles.messageNumber}>2</Text>
           </View>
         </TouchableOpacity>
+      </View>
+      <View style={GlobalStyles.userStoriesContainer}>
+        <FlatList
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+          data={userStories}
+          renderItem={({ item }) => (
+            <UserStories
+              firstName={item.firstName}
+              profileImage={item.profileImage}
+            />
+          )}
+          keyExtractor={(item) => item.id.toString()}
+        />
       </View>
     </SafeAreaView>
   );
