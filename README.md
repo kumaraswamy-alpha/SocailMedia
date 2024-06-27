@@ -10,6 +10,8 @@ To start Expo, run the following command from the _root_ of your React Native pr
 
 ```
 npx expo init [yourProjectName]
+
+cd [yourProjectName]
 ```
 
 ## Step 2: Start your Application
