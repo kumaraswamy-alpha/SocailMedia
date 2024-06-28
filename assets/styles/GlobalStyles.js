@@ -26,7 +26,7 @@ const GlobalStyles = StyleSheet.create({
     fontSize: 6,
     fontFamily: "Inter_600SemiBold",
   },
-  userStoriesContainer: {
+  userStoryContainer: {
     marginTop: 20,
     marginHorizontal: 28,
   },
@@ -44,6 +44,9 @@ const GlobalStyles = StyleSheet.create({
     borderColor: "#F35BAC",
     borderWidth: 1,
     padding: 3,
+  },
+  userPostContainer: {
+    marginHorizontal: 24,
   },
 });
 export default GlobalStyles;
