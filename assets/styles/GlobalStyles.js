@@ -1,34 +1,45 @@
 import { StyleSheet } from "react-native";
+import { horizontalScale, scaleFontSize, verticalScale } from "./Scalling";
 
 const GlobalStyles = StyleSheet.create({
+  backgroundWhite: {
+    backgroundColor: "#FFFFFF",
+  },
+  flex: {
+    flex: 1,
+  },
   header: {
-    marginLeft: 27,
-    marginRight: 17,
-    marginTop: 30,
+    marginLeft: horizontalScale(27),
+    marginRight: horizontalScale(17),
+    marginTop: verticalScale(30),
     alignItems: "center",
     justifyContent: "space-between",
     flexDirection: "row",
   },
-  messageIcon: { padding: 14, backgroundColor: "#F9FAFB", borderRadius: 100 },
+  messageIcon: {
+    backgroundColor: "#F9FAFB",
+    padding: horizontalScale(14),
+    borderRadius: horizontalScale(100),
+  },
   messageNumberContainer: {
     justifyContent: "center",
     flexDirection: "row",
     backgroundColor: "#F35BAC",
-    borderRadius: 10,
-    width: 10,
-    height: 10,
+    width: horizontalScale(10),
+    height: horizontalScale(10),
+    borderRadius: horizontalScale(10),
     position: "absolute",
-    top: 12,
-    right: 10,
+    right: horizontalScale(10),
+    top: verticalScale(10),
   },
   messageNumber: {
     color: "#fff",
-    fontSize: 6,
+    fontSize: scaleFontSize(6),
     fontFamily: "Inter_600SemiBold",
   },
   userStoryContainer: {
-    marginTop: 20,
-    marginHorizontal: 28,
+    marginTop: verticalScale(20),
+    marginHorizontal: horizontalScale(28),
   },
   storyContainer: {
     marginRight: 20,
@@ -46,7 +57,10 @@ const GlobalStyles = StyleSheet.create({
     padding: 3,
   },
   userPostContainer: {
-    marginHorizontal: 24,
+    marginHorizontal: horizontalScale(24),
+  },
+  flexGrow: {
+    flexGrow: 1,
   },
 });
 export default GlobalStyles;
